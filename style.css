@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1c1f26, #0d0f14);
+}
+
+.hidden { display: none; }
+
+.screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: #f4f1e8;
+  padding: 30px;
+  border-radius: 14px;
+  width: 300px;
+  text-align: center;
+}
+
+header {
+  background: #14161c;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paper {
+  max-width: 1000px;
+  margin: 20px auto;
+  background: #f5f2e9;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.card {
+  background: #e3e0d3;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.status {
+  display: flex;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.status div {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.life { background:#ffb3b3; }
+.sanity { background:#ffeaa7; }
+.control { background:#9bbcff; }
+.aura { background:#c77dff; }
+
+.bar-controls {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.skill {
+  display:flex;
+  justify-content:space-between;
+  padding:6px;
+  border-bottom:1px dashed #aaa;
+  cursor:pointer;
+}
+
+.dice-layout {
+  display:flex;
+  gap:20px;
+}
+
+.dice {
+  font-size:60px;
+  text-align:center;
+  animation: roll 0.8s infinite;
+}
+
+@keyframes roll {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+
+.dice-panel {
+  background:#14161c;
+  color:#fff;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+}
