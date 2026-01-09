@@ -2,18 +2,19 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Rasgo da Fenda — Aegis</title>
+  <title>Rasgo da Fenda — Aegis V6</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- LOGIN FAKE -->
+<!-- LOGIN -->
 <div id="login-screen" class="screen">
   <div class="login-card">
-    <h1>Rasgo da Fenda</h1>
+    <h1>RASGO DA FENDA</h1>
     <p>Aegis — O Despertar</p>
-    <input id="loginName" placeholder="Seu nome">
+
+    <input id="loginName" placeholder="Nome do jogador">
     <button onclick="fakeLogin()">Entrar</button>
   </div>
 </div>
@@ -21,45 +22,52 @@
 <!-- APP -->
 <div id="app" class="hidden">
 
-<header>
-  <h2>Ficha de Personagem</h2>
-  <nav>
-    <button onclick="showTab('create')">Criar</button>
-    <button onclick="showTab('characters')">Personagens</button>
-    <button onclick="showTab('dice')">Dados</button>
-  </nav>
-</header>
+  <header>
+    <h1>Rasgo da Fenda</h1>
+    <nav>
+      <button onclick="showTab('create')">Criar</button>
+      <button onclick="showTab('characters')">Personagens</button>
+      <button onclick="showTab('dice')">Dados</button>
+    </nav>
+  </header>
 
-<section id="create" class="tab">
-  <div class="paper">
-    <h3>Criar Personagem</h3>
-    <input id="charName" placeholder="Nome">
-    <textarea id="charHistory" placeholder="História"></textarea>
-    <button onclick="createCharacter()">Criar</button>
-  </div>
-</section>
+  <!-- CRIAR -->
+  <section id="create" class="tab">
+    <div class="paper">
+      <h2>Criar Personagem</h2>
+      <input id="charName" placeholder="Nome do personagem">
+      <textarea id="charHistory" placeholder="História"></textarea>
+      <button onclick="createCharacter()">Criar</button>
+    </div>
+  </section>
 
-<section id="characters" class="tab hidden">
-  <div class="paper">
-    <h3>Personagens</h3>
-    <div id="playerList"></div>
-  </div>
-</section>
+  <!-- PERSONAGENS -->
+  <section id="characters" class="tab hidden">
+    <div class="paper">
+      <h2>Personagens</h2>
+      <div id="playerList"></div>
+    </div>
+  </section>
 
-<section id="dice" class="tab hidden">
-  <div class="paper dice-layout">
-    <div class="dice-left">
-      <h3>Rolagem de Dados</h3>
+  <!-- DADOS -->
+  <section id="dice" class="tab hidden">
+    <div class="paper">
+      <h2>Rolagem</h2>
+
       <select id="diceCharacter"></select>
       <div id="skillsDice"></div>
-    </div>
 
-    <div class="dice-right">
-      <div id="diceAnimation" class="dice hidden">🎲</div>
-      <div id="diceResult" class="dice-panel hidden"></div>
+      <div id="diceAnimation" class="hidden">🎲 Rolando...</div>
+      <div id="diceResult" class="hidden"></div>
     </div>
-  </div>
-</section>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
 
 </div>
 
